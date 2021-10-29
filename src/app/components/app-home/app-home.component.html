@@ -1,0 +1,13 @@
+<div align="center">
+    <button type="button" class="btn btn-warning hell" (click)="prev()" aria-haspopup="true" aria-expanded="false"
+        style="width:50%">
+        <font size="6">Anterior</font>
+    </button>
+    <button type="button" class="btn btn-success" (click)="next()" aria-haspopup="true" aria-expanded="false"
+        style="width:50%">
+        <font size="6">Següent</font>
+    </button>
+</div>
+<div class="container">
+    <app-escena *ngFor="let historia of historias; let i = index;" [historiaItem]="historia" [itemActive]="h_index" [i]="i"></app-escena>
+</div>
