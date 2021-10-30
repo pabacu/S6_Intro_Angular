@@ -9,17 +9,17 @@ import { AppHomeComponent } from '../app-home/app-home.component';
 })
 export class AppEscenaComponent implements OnInit {
 
-  @Input() historiaItem : {titulo: string};
-  @Input() i : number; //actual ngfor index
-  @Input() itemActive : number;
+  @Input() historiaItem: { titulo: string, img: string };
+  @Input() i: number; //actual ngfor index
+  @Input() itemActive: number;
 
   constructor() { }
 
   ngOnInit(): void {
-    
+
   }
 
-  isActive():boolean{
+  isActive(): boolean {
     return (this.i + 1) == this.itemActive;
   }
 

@@ -1,13 +1,31 @@
-<div align="center">
-    <button type="button" class="btn btn-warning hell" (click)="prev()" aria-haspopup="true" aria-expanded="false"
-        style="width:50%">
-        <font size="6">Anterior</font>
-    </button>
-    <button type="button" class="btn btn-success" (click)="next()" aria-haspopup="true" aria-expanded="false"
-        style="width:50%">
-        <font size="6">Següent</font>
-    </button>
+
+<div *ngIf="iniciar_historia else welcome" class="container {{h_img}}" >
+    <br/>
+    <div align="center">
+        <button type="button" class="btn btn-warning hell" (click)="prev()" aria-haspopup="true" aria-expanded="false"
+            style="width:50%">
+            <font size="6">Anterior</font>
+        </button>
+        <button type="button" class="btn btn-success" (click)="next()" aria-haspopup="true" aria-expanded="false"
+            style="width:50%">
+            <font size="6">Següent</font>
+        </button>
+    </div>
+
+    <app-escena *ngFor="let historia of historias; let i = index;" [historiaItem]="historia" [itemActive]="h_index"
+        [i]="i"></app-escena>
 </div>
-<div class="container">
-    <app-escena *ngFor="let historia of historias; let i = index;" [historiaItem]="historia" [itemActive]="h_index" [i]="i"></app-escena>
-</div>
+
+
+<ng-template #welcome>
+    <div align="center" class="container heroes">
+    <h1>Benvingut/da a Herois</h1>
+    <br/>
+    <p>Herois es un tutorial on podràs veure una história, avançar i retrocedir acompanyat d'unes espectaculars imatges.</p>
+    <p>Pren el botó per començar</p>
+    <button type="button" class="btn btn-warning hell" (click)="start()" aria-haspopup="true" aria-expanded="false"
+        style="width:50%;text-align: center;">
+        <font size="14">Començar</font>
+    </button>
+    </div>
+</ng-template>

@@ -1,3 +1,39 @@
+
 .container{
     width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0px;
+    left: 0px;
+}
+
+.heroes{
+    background-image: url(../../../assets/img/heroes.gif);
+    background-position: bottom;
+    background-size: auto;
+    background-repeat: no-repeat;
+}
+
+.img1{
+    background-image: url(../../../assets/img/1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.img2{
+    background-image: url(../../../assets/img/2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.img3{
+    background-image: url(../../../assets/img/3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.img4{
+    background-image: url(../../../assets/img/4.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
